@@ -1,5 +1,3 @@
-import math
-
 def phi(n):
     r = n
     d = 2
