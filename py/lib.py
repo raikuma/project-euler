@@ -45,11 +45,7 @@ def isTriNumber(n):
     return False
 
 def isAnagram(a, b):
-    a = list(a)
-    b = list(b)
-    a.sort()
-    b.sort()
-    return a == b
+    return sorted(a) == sorted(b)
 
 def reverseStr(s):
     return s[::-1]
@@ -74,3 +70,23 @@ def Eratos(n):
             i += 1
         
     return r
+
+def getPrime():
+    f = open('prime.txt')
+    d = f.read()
+    f.close()
+    d = d.split()
+    d = [int(x) for x in d]
+    return d
+
+def phi(n):
+    r = n
+    d = 2
+    p = n
+    while r > 1:
+        if r % d == 0:
+            p -= int(r/d)
+            while r % d == 0:
+                r = int(r/d)
+        d += 1
+    return p
