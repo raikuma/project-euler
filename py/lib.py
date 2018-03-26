@@ -77,6 +77,7 @@ def getPrime():
     f.close()
     d = d.split()
     d = [int(x) for x in d]
+    print('Load prime.txt')
     return d
 
 def phi(n):
