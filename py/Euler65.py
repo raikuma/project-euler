@@ -9,3 +9,10 @@ for i in a[-2::-1]:
     x, y = q, p
 print(x, y)
 print(sum([int(t) for t in str(y)]))
+
+from fractions import Fraction
+s = Fraction(1, a[-1])
+for i in a[-2::-1]:
+    s = 1 / (i + s)
+print(s)
+print(sum([int(t) for t in str(s.denominator)]))
